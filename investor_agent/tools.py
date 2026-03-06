@@ -22,7 +22,7 @@ from yfinance.exceptions import YFRateLimitError
 
 # Check TA-Lib availability
 try:
-    import talib
+    import talib  # type: ignore[import]
 
     _ta_available = True
 except ImportError:
@@ -666,7 +666,7 @@ def calculate_technical_indicator(
         raise ValueError("TA-Lib library not available. Install with: pip install ta-lib")
 
     import numpy as np
-    from talib import MA_Type
+    from talib import MA_Type  # type: ignore[import]
 
     ticker = validate_ticker(ticker)
 
