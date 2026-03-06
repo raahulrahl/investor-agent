@@ -5,7 +5,7 @@
 <h1 align="center">investor-agent</h1>
 
 <p align="center">
-  <strong>this is a mcp agent</strong>
+  <strong>AI-powered investment analysis agent with comprehensive financial tools</strong>
 </p>
 
 <p align="center">
@@ -21,12 +21,16 @@
 
 ## 📖 Overview
 
-this is a mcp agent. Built on the [Bindu Agent Framework](https://github.com/getbindu/bindu) for the Internet of Agents.
+Investor Agent is a comprehensive AI-powered financial analysis agent built on the [Bindu Agent Framework](https://github.com/getbindu/bindu) for the Internet of Agents. It provides real-time market data, technical analysis, sentiment indicators, and investment insights.
 
 **Key Capabilities:**
-- 🔍 [Add your key capabilities here]
-- ✅ [Add another capability]
-- 🚨 [Add another capability]
+- � **Real-time Market Data**: Stock prices, historical data, and market movers
+- 📈 **Technical Analysis**: SMA, EMA, RSI, MACD, Bollinger Bands
+- 🎯 **Market Sentiment**: CNN Fear & Greed Index, Google Trends
+- 💰 **Financial Statements**: Income statements, balance sheets, cash flows
+- 🏢 **Institutional Data**: Insider trades, institutional holders
+- � **Earnings Calendar**: Upcoming earnings announcements
+- 📊 **Options Analysis**: Complete options chains with Greeks
 
 ---
 
@@ -34,7 +38,7 @@ this is a mcp agent. Built on the [Bindu Agent Framework](https://github.com/get
 
 ### Prerequisites
 
-- Python 3.10+
+- Python 3.12+
 - [uv](https://github.com/astral-sh/uv) package manager
 - API keys for OpenRouter and Mem0 (both have free tiers)
 
@@ -74,18 +78,6 @@ uv run python -m investor_agent
 # Agent will be available at http://localhost:3773
 ```
 
-### Github Setup
-
-```bash
-# Initialize git repository and commit your code
-git init -b main
-git add .
-git commit -m "Initial commit"
-
-# Create repository on GitHub and push (replace with your GitHub username)
-gh repo create Paraschamoli/investor-agent --public --source=. --remote=origin --push
-```
-
 ---
 
 ## 💡 Usage
@@ -93,34 +85,48 @@ gh repo create Paraschamoli/investor-agent --public --source=. --remote=origin -
 ### Example Queries
 
 ```bash
-# Example query 1
-"[Add example query here]"
+# Market analysis
+"Analyze Apple (AAPL) stock performance over the last 6 months"
 
-# Example query 2
-"[Add another example]"
+# Technical indicators
+"Calculate RSI and MACD indicators for Tesla (TSLA)"
+
+# Market sentiment
+"What's the current market sentiment? Check Fear & Greed index and top market movers"
+
+# Financial analysis
+"Get the latest quarterly income statement and balance sheet for Microsoft (MSFT)"
+
+# Earnings analysis
+"Which companies have earnings announcements this week? Focus on tech stocks"
+
+# Options analysis
+"Get the options chain for NVIDIA (NVDA) with expiration dates in the next 30 days"
 ```
 
 ### Input Formats
 
 **Plain Text:**
 ```
-[Describe expected input format]
+Analyze [TICKER] stock with [specific requirements]
 ```
 
 **JSON:**
 ```json
 {
-  "content": "[example content]",
-  "focus": "[example focus]"
+  "content": "Get technical analysis for TSLA with RSI and MACD indicators",
+  "focus": "technical-analysis"
 }
 ```
 
 ### Output Structure
 
 The agent returns structured output with:
-- **[Output Component 1]**: Description
-- **[Output Component 2]**: Description
-- **[Output Component 3]**: Description
+- **Market Data**: Real-time prices and historical data
+- **Technical Indicators**: Calculated technical analysis metrics
+- **Sentiment Analysis**: Market sentiment indicators and trends
+- **Financial Reports**: Formatted financial statements
+- **Investment Insights**: AI-powered analysis and recommendations
 
 ---
 
@@ -145,30 +151,39 @@ For complete API documentation, request/response formats, and examples, visit:
 
 ## 🎯 Skills
 
-### investor_agent (v1.0.0)
+### investment-analysis (v1.0.0)
 
 **Primary Capability:**
-- [Describe what this skill does]
-- [Add key features]
+- Comprehensive financial analysis and investment insights
+- Real-time market data and technical indicators
+- Sentiment analysis and earnings tracking
 
 **Features:**
-- [Feature 1]
-- [Feature 2]
-- [Feature 3]
+- 📊 Real-time stock price data and historical analysis
+- 📈 Technical indicators (SMA, EMA, RSI, MACD, Bollinger Bands)
+- 🎯 Market sentiment indicators (Fear & Greed Index, Google Trends)
+- 💰 Financial statements (income, balance sheet, cash flow)
+- 🏢 Institutional holdings and insider trading data
+- 📅 Earnings calendar and surprise analysis
+- 📊 Options chain analysis with Greeks
+- 🚀 Market movers and sector performance
 
 **Best Used For:**
-- [Use case 1]
-- [Use case 2]
-- [Use case 3]
+- Stock analysis and due diligence
+- Portfolio risk assessment
+- Market timing and entry/exit decisions
+- Earnings season preparation
+- Options strategy development
 
 **Not Suitable For:**
-- [Anti-pattern 1]
-- [Anti-pattern 2]
+- Real-time trading execution
+- Financial advice (educational purposes only)
+- High-frequency trading strategies
 
 **Performance:**
-- Average processing time: ~[X] seconds
-- Max concurrent requests: [N]
-- Memory per request: [X]MB
+- Average processing time: ~2-5 seconds
+- Max concurrent requests: 10
+- Memory per request: ~50MB
 
 ---
 
@@ -242,12 +257,13 @@ GitHub Actions will automatically:
 investor-agent/
 ├── investor_agent/
 │   ├── skills/
-│   │   └── investor_agent/
+│   │   └── investment-analysis/
 │   │       ├── skill.yaml          # Skill configuration
 │   │       └── __init__.py
 │   ├── __init__.py
 │   ├── __main__.py
 │   ├── main.py                     # Agent entry point
+│   ├── tools.py                   # Financial analysis tools
 │   └── agent_config.json           # Agent configuration
 ├── tests/
 │   └── test_main.py
@@ -341,5 +357,6 @@ uvx cookiecutter https://github.com/getbindu/create-bindu-agent.git
   <a href="https://bindus.directory">🌐 Agent Directory</a>
 </p>
 
-#   i n v e s t o r - a g e n t  
+#   i n v e s t o r - a g e n t 
+ 
  
