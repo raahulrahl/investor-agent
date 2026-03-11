@@ -1,7 +1,7 @@
 {
   "author": "paras@getbindu.com",
   "name": "investor-agent",
-  "description": "this is a mcp agent",
+  "description": "Investment analysis agent that fetches market data, financial statements, sentiment indicators, and technical analysis to generate comprehensive investment reports",
   "version": "1.0.0",
   "recreate_keys": false,
   "skills": [
